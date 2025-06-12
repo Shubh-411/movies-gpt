@@ -33,3 +33,11 @@ If you are developing a production application, we recommend using TypeScript wi
 - MoviesGPT page
   - Search Bar
   - Movies Suggestions
+
+# Done:
+
+- Vite react app
+- Configured Tailwind CSS
+- Header
+- Build Login Form
+- Sign Up form

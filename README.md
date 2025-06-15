@@ -38,6 +38,22 @@ If you are developing a production application, we recommend using TypeScript wi
 
 - Vite react app
 - Configured Tailwind CSS
+- Routing of App
 - Header
 - Build Login Form
 - Sign Up form
+- Form Validation
+- useRef Hook
+- Setting Up firebase
+  - npm install firebase
+  - npm install -g firebase-tools
+  - firebase login
+  - firebase init
+  - firebase deploy
+- Deploying app to production
+- Create SignUp in firebase
+- Implemented Sign in user API
+- Created Redux Store with User Slice
+- implement Sign OUt
+- Updated profile
+- Fetch Movies from TMDB movies

@@ -9,18 +9,17 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase"; // Ensure you have firebase initialized
-import { useNavigate } from "react-router";
+
 const Login = () => {
   const [isSingedIn, setIsSignedIn] = useState(true);
   const [errorMsg, setErrorMsg] = useState("");
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   // Using useRef to access the input values directly
   // This is useful for form inputs where you want to avoid state updates on every keystroke
   const name = useRef(null); //
   const email = useRef(null);
   const password = useRef(null);
-  const photoURL = useRef(null); // Assuming you might want to use this later
+  // const photoURL = useRef(null); // Assuming you might want to use this later
 
   const handleClick = () => {
     //   Validate the form inputs here
@@ -62,7 +61,7 @@ const Login = () => {
                 })
               );
               // ...
-              navigate("/browse"); // Redirect to home page after sign up
+              // navigate("/browse"); // Redirect to home page after sign up
             })
             .catch((error) => {
               // An error occurred
@@ -90,8 +89,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
-          navigate("/browse"); // Redirect to home page after sign in
           // ...
         })
         .catch((error) => {

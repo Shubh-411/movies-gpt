@@ -56,4 +56,17 @@ If you are developing a production application, we recommend using TypeScript wi
 - Created Redux Store with User Slice
 - implement Sign OUt
 - Updated profile
-- Fetch Movies from TMDB movies
+- Bug Fix: Sign Up user DisplayName and profile picture update
+- Bug Fix : If the user is not logged in, Redirect /browse to login page and vice-versa
+- Unsubscribed to the onAuthStateChanged callback
+- TMDB works only with Airtel HotSpot or Airtel-WIFI
+- Fetch Movies from TMDB movies -- Register for TMDB API and create an app and get access token
+- Get Data from TMDB now playing movies list API
+- Custom hook for Now Playing movies
+- Create MovieSlice
+- Update store with movies data
+- Planning for Maincontainer and Secondary container
+- Fetch data for Trailer video
+- Update store for Trailer video data
+- Embededd the Youtube video as Background and make it autoplay and mute
+- Tailwind classes to make main container look awesome

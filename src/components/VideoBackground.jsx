@@ -15,9 +15,9 @@ const VideoBackground = ({ movieId }) => {
           "?autoplay=1&mute=1&rel=0&modestbranding=1&controls=0&playsinline=1&loop=1&playlist=" +
           trailerVideo?.key
         }
-        title="YouTube video player"
+        // title="YouTube video player"
         allow="autoplay; fullscreen"
-        allowFullScreen
+        // allowFullScreen
         frameBorder="0"
         referrerPolicy="strict-origin-when-cross-origin"
       />

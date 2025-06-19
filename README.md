@@ -70,3 +70,12 @@ If you are developing a production application, we recommend using TypeScript wi
 - Update store for Trailer video data
 - Embededd the Youtube video as Background and make it autoplay and mute
 - Tailwind classes to make main container look awesome
+- Build Secondary Component
+- Build Movie List
+- Build Movie cards
+- TMDB image CDN URL
+- created custom-hooks to fetch different type of Movie-lists: usePopularMovies, useTopRatedMovies, etc.
+- GPT search feature
+- GPT Search Bar
+- (FEATURE) Multi-language Feaute
+- Integrate GPT APIs

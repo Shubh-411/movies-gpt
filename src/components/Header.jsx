@@ -4,10 +4,15 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice"; // Adjust the import path as necessary
+import { toggleGptSearchView } from "../utils/gptSlice";
+import { SUPPORTED_LANGUAGES } from "../utils/constants";
+import { changeLanguage } from "../utils/configSlice";
 const Header = () => {
   const navigate = useNavigate();
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   // Accessing the user state from Redux store
   const user = useSelector((store) => store.user);
+
   const dispatch = useDispatch();
   const handleSignOut = () => {
     signOut(auth)
@@ -49,6 +54,17 @@ const Header = () => {
     });
     return () => unsubscribe(); // Cleanup the listener or Unsubscribe  on component unmount
   }, []);
+
+  const handleGptSearchClick = () => {
+    // Toggle GPT-Search
+
+    dispatch(toggleGptSearchView());
+  };
+  const handleLanguageChange = (event) => {
+    const selectedLanguage = event.target.value;
+    console.log(selectedLanguage);
+    dispatch(changeLanguage(selectedLanguage));
+  };
   return (
     <div className="flex justify-between absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10">
       <img
@@ -58,6 +74,26 @@ const Header = () => {
       />
       {user && (
         <div className="flex items-center text-white font-bold">
+          {showGptSearch && (
+            <select
+              className="mr-4 p-3 bg-gray-800 text-white rounded-lg"
+              onChange={handleLanguageChange}
+            >
+              {SUPPORTED_LANGUAGES.map((lang) => (
+                <option key={lang.identifier} value={lang.identifier}>
+                  {lang.name}
+                </option>
+              ))}
+            </select>
+          )}
+
+          <button
+            className="mr-4 p-3 bg-blue-500 hover:bg-blue-400 rounded-lg cursor-pointer"
+            onClick={handleGptSearchClick}
+          >
+            GPT Search
+          </button>
+
           <img
             className="w-10 h-10 rounded-full mr-2"
             src={user?.photoURL}

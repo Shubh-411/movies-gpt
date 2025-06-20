@@ -2,8 +2,7 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjZjJmNDhmYzI1MjQ5YzNlN2I4ZWFiYzEzMjEyMGY1NCIsIm5iZiI6MTc1MDEzNDI1MS4xODU5OTk5LCJzdWIiOiI2ODUwZWRlYjA4ZTlhMzYyNjBlN2I3NTgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.dtpjlMIuBpaLWkAMCJkOvbl9zq7oPJVFYbL_c2GKvUA",
+    Authorization: "Bearer" + import.meta.env.VITE_TMDB_KEY,
   },
 };
 
@@ -29,3 +28,9 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "hi", name: "Hindi" },
   { identifier: "spanish", name: "Spanish" },
 ];
+
+export const OPENAI_KEY = import.meta.env.VITE_OPENAI_KEY;
+
+export const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_KEY;
+
+export const FIREBASE_API_KEY = import.meta.env.VITE_FIREBASE_KEY;

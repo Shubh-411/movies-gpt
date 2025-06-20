@@ -1,13 +1,14 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { FIREBASE_API_KEY } from "./constants";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB7fL44BMTYkkdziK3w6fp1VLxA63CiLYw",
+  apiKey: FIREBASE_API_KEY,
   authDomain: "movies-gpt-f5100.firebaseapp.com",
   projectId: "movies-gpt-f5100",
   storageBucket: "movies-gpt-f5100.firebasestorage.app",

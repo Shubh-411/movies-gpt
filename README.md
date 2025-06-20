@@ -79,3 +79,5 @@ If you are developing a production application, we recommend using TypeScript wi
 - GPT Search Bar
 - (FEATURE) Multi-language Feaute
 - Integrate GPT APIs
+- Got movies based on Genre from GPT
+-

@@ -78,6 +78,10 @@ If you are developing a production application, we recommend using TypeScript wi
 - GPT search feature
 - GPT Search Bar
 - (FEATURE) Multi-language Feaute
-- Integrate GPT APIs
-- Got movies based on Genre from GPT
--
+- Get GEMINI-AI Api key
+- Gemini Search Api call
+- Fetched Gemini movie suggestions TMDB
+- created gptMovie slice added data
+- Reused MovieList component to show gpt movie suggestions list
+- Memoization
+- Added .env file and also to .gitignore

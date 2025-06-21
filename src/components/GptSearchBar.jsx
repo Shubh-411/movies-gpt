@@ -60,19 +60,19 @@ const GptSearchBar = () => {
     //   For each movie I'll search TMDB API
   };
   return (
-    <div className="pt-[10%] flex justify-center">
+    <div className="pt-[35%] md:pt-[10%] flex justify-center">
       <form
-        className="w-1/2 grid grid-cols-12 bg-gray-300 rounded-lg shadow-lg"
+        className="w-full m-6 md:w-1/2 md:m-0 grid grid-cols-12 bg-gray-300 rounded-lg shadow-lg"
         onSubmit={(e) => e.preventDefault()}
       >
         <input
           ref={searchText}
           type="text"
           placeholder={lang[langKey].searchPlaceholder}
-          className="p-4 m-4 col-span-9 border border-gray-300 rounded-md"
+          className="p-2 m-2 md:p-3 col-span-9 border border-gray-300 rounded-md"
         />
         <button
-          className="m-4 px-4 py-2 col-span-3 bg-red-800 text-white rounded-lg"
+          className="m-2 px-2 py-2 col-span-3 bg-red-800 text-white rounded-lg"
           onClick={handleGptSearchClick}
         >
           {lang[langKey].search}

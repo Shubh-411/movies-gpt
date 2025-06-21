@@ -66,14 +66,14 @@ const Header = () => {
     dispatch(changeLanguage(selectedLanguage));
   };
   return (
-    <div className="flex justify-between absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10">
+    <div className="flex justify-between absolute w-full px-8 py-2 bg-gradient-to-b from-black z-10 flex-col md:flex-row ">
       <img
-        className="w-44"
+        className="w-44 mx-auto md:mx-0"
         src="https://images.ctfassets.net/y2ske730sjqp/821Wg4N9hJD8vs5FBcCGg/9eaf66123397cc61be14e40174123c40/Vector__3_.svg?w=460"
         alt="logo"
       />
       {user && (
-        <div className="flex items-center text-white font-bold">
+        <div className="flex p-4 md:p-3  justify-between text-white font-bold">
           {showGptSearch && (
             <select
               className="mr-4 p-3 bg-gray-800 text-white rounded-lg"
@@ -88,14 +88,14 @@ const Header = () => {
           )}
 
           <button
-            className="mr-4 p-3 bg-blue-500 hover:bg-blue-400 rounded-lg cursor-pointer"
+            className=" text-sm md:text-md mr-4 p-1 md:p-3 bg-blue-500 hover:bg-blue-400 rounded-lg cursor-pointer"
             onClick={handleGptSearchClick}
           >
-            GPT Search
+            GPT-Search
           </button>
 
           <img
-            className="w-10 h-10 rounded-full mr-2"
+            className="hidden md:block w-10 h-10 rounded-full mr-2"
             src={user?.photoURL}
             alt="user-avatar"
           />
